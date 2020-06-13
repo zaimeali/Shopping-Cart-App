@@ -1,10 +1,12 @@
 .App {
-  text-align: center;
+  text-align: center !important;
+
+  user-select: none !important;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 40vmin !important;
+  pointer-events: none !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,14 +16,52 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #282c34 !important;
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: calc(10px + 2vmin) !important;
+  color: white !important;
+}
+
+.App-title-image{
+  height: 42px !important;
+  margin-bottom: -10px !important;
+}
+
+.App-main{
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 170vh !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.App-footer{
+  position: fixed !important;
+  width: 100% !important;
+  bottom: 0 !important;
+  background-color: #282c34 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+
+  font-weight: 600 !important;
+}
+
+.App-footer-title{
+  color: rgb(255, 52, 52) !important;
+}
+
+.App-footer-image{
+  height: 23px !important;
+  margin-bottom: -4px !important;
 }
 
 .App-link {

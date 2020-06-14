@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 
 // API
 // import { MobileConsumer } from './api/ContextAPI';
+import MobileProvider from './api/ContextAPI';
 
 // Components
 import MobileList from './components/MobileList/MobileList';  
@@ -28,15 +29,17 @@ function App() {
         <Link className="App-title-link" to="/cart">My Cart</Link>
       </header>
 
-      <main className="App-main">
+      <main className="App-main mx-auto">
         <Route path="/" component={ MobileList } />
         <Switch>
-          <Route exact path="/" component={ MobileList } />
+          <MobileProvider>
+            <Route exact path="/" component={ MobileList } />
+          </MobileProvider>
         </Switch>
       </main>
 
       <footer className="App-footer">
-        <p>Made in <span className="App-footer-title">React</span> with <img className="App-footer-image" src={ love } alt="Heart Logo" /></p>
+        <p className="App-footer-para">Made in <span className="App-footer-title">React</span> with <img className="App-footer-image" src={ love } alt="Heart Logo" /></p>
       </footer>
     </Router>
   );

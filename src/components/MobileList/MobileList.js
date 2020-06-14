@@ -7,7 +7,7 @@ import { MobileConsumer } from '../../api/ContextAPI';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 // Components
-// import Mobile from '../Mobile/Mobile';
+import Mobile from '../Mobile/Mobile';
 
 export default class MobileList extends Component {
 
@@ -18,9 +18,17 @@ export default class MobileList extends Component {
                     <MobileConsumer>
                         {(value) => {
                             // return console.info(JSON.stringify(value))
-                            // console.log(value)
+                            // console.log(Object.keys(value))
+                            // console.log(value["mobiles"])
+                            if(value){
+                                console.log(JSON.stringify(value));
+                                console.log(value.mobiles)
+                                return value.mobiles.map((product) => {
+                                    return <Mobile key={product.id} product={product} />
+                                })
+                            }
                             // return value.mobiles.map((product) => {
-                            //     return <Mobile key={product.id} product={product} />
+                            //     // return <Mobile key={product.id} product={product} />
                             // })
                         }}
                     </MobileConsumer>

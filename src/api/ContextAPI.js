@@ -3,7 +3,7 @@ import React, { Component, createContext } from 'react';
 // Data
 import { data } from '../data/MobileData';
 
-const MobileContext = createContext({});
+const MobileContext = createContext();
 
 // console.log(data);
 
@@ -16,10 +16,10 @@ class MobileProvider extends Component {
     };
     
     render(){
-        console.log(this.state.mobiles)
+        // console.log(this.state.mobiles)
         return (
             <MobileContext.Provider value={{ 
-                state: this.state 
+                ...this.state 
             }}>
                 { this.props.children }
             </MobileContext.Provider>

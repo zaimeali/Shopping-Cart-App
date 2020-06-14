@@ -14,11 +14,12 @@ import shopping from './assets/logo/shopping.png';
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 
 // API
-// import { MobileConsumer } from './api/ContextAPI';
+import { MobileConsumer } from './api/ContextAPI';
 import MobileProvider from './api/ContextAPI';
 
 // Components
 import MobileList from './components/MobileList/MobileList';  
+import Cart from './components/Cart/Cart';
 
 function App() {
   return (
@@ -26,7 +27,16 @@ function App() {
       <header className="App-header">
         <Link to="/"><h2 className="App-title">Shopping Cart <img className="App-title-image" src={ shopping } alt="Shopping Cart Logo" /></h2></Link>
 
-        <Link className="App-title-link" to="/cart">My Cart</Link>
+        <MobileConsumer>
+          {
+            (value) => {
+              console.log(value);
+                return (
+                  <Link className="App-title-link" to="/cart">My Cart</Link>
+                );
+            }
+          }
+        </MobileConsumer>
       </header>
 
       <main className="App-main mx-auto">
@@ -34,6 +44,7 @@ function App() {
         <Switch>
           <MobileProvider>
             <Route exact path="/" component={ MobileList } />
+            <Route path='/cart' component={ Cart } />
           </MobileProvider>
         </Switch>
       </main>

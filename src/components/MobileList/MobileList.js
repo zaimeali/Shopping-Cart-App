@@ -21,8 +21,8 @@ export default class MobileList extends Component {
                             // console.log(Object.keys(value))
                             // console.log(value["mobiles"])
                             if(value){
-                                console.log(JSON.stringify(value));
-                                console.log(value.mobiles)
+                                // console.log(JSON.stringify(value));
+                                // console.log(value.mobiles)
                                 return value.mobiles.map((product) => {
                                     return <Mobile key={product.id} product={product} />
                                 })

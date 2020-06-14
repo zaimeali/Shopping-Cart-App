@@ -25,7 +25,7 @@ export default class Mobile extends Component {
             <div className="col-9 mx-auto col-md-6 col-lg-3">
                 <MobileConsumer>
                     {(value) => (
-                        <Card className="mobile-card text-center mx-auto px-auto" onClick={()=>{value.handleDetails(id)}} style={{ width: '17rem' }}>
+                        <Card className="mobile-card text-center mx-auto px-auto" style={{ width: '17rem' }}>
                             <Card.Img className="mobile-image img-fluid mx-auto pt-3" variant="top" alt={ `${ name }` } src={ require(`../../assets/img/${image}`) } />
                             <Card.Body>
                                 <Card.Title className="mobile-title text-center">

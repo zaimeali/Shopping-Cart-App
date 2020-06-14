@@ -50,14 +50,14 @@ a:-webkit-any-link{
 .App-title-link{
   position: absolute;
   right: 25px;
+  font-size: 16px;
+  padding: 5px 10px;
+  font-weight: 600;
 
   color: black;
-  font-size: 16px;
   text-decoration: none;
 
-  font-weight: 600;
   border: 1px solid black;
-  padding: 5px 10px;
 
   border-radius: 5px;
 
@@ -111,5 +111,23 @@ a:-webkit-any-link{
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 440px){
+  .App-header, .App-title{
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .App-title-image{
+    height: 32px !important;
+  }
+
+  .App-title-link{
+    right: 15px;
+    font-size: 14px;
+    padding: 4px 8px;
+    font-weight: 600;
   }
 }

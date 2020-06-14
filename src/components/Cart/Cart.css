@@ -1,3 +1,49 @@
 .Cart-title{
     font-weight: 600;
 }
+
+.Cart-title::after{
+    content: "";
+    display: block;
+    width: 220px;
+    background-color: #282c34 !important;
+    border-radius: 20px !important;
+    height: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.Cart-title-header{
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.trash-delete{
+    height: 18px;
+    margin-top: -3px !important;
+}
+
+.btn-qty{
+    margin: auto 5px !important;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.card-show{
+    border-bottom: 1px solid black;
+}
+
+.cart-price{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.cart-price-style{
+    font-size: 14px;
+}
+
+.removeBtn{
+    color: black;
+}

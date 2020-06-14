@@ -21,6 +21,8 @@ export default class Mobile extends Component {
 
         const { id, name, price, image, inCart } = this.props.product;
 
+        let nf = new Intl.NumberFormat(); 
+
         return (
             <div className="col-9 mx-auto col-md-6 col-lg-3">
                 <MobileConsumer>
@@ -36,7 +38,7 @@ export default class Mobile extends Component {
                                 <Col className="">
                                     <Row className="text-center mb-2">
                                         <div className="text-center mx-auto">
-                                            <small className="text-muted font-weight-bold">PKR { price }</small>
+                                            <small className="text-muted font-weight-bold">PKR { nf.format(price) }</small>
                                         </div>
                                     </Row>
                                     <Row className="text-center">

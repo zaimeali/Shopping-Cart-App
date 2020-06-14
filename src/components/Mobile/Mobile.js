@@ -14,19 +14,19 @@ import './Mobile.css';
 import { MobileConsumer } from '../../api/ContextAPI';
 
 // Checking Image
-import m1 from '../../assets/img/m1.jpg';
+// import m1 from '../../assets/img/m1.jpg';
 
 export default class Mobile extends Component {
     render() {
 
-        const { id, name, price, image, inCart } = this.props.product   ;
+        const { id, name, price, image, inCart } = this.props.product;
 
         return (
             <div className="col-9 mx-auto col-md-6 col-lg-3">
                 <MobileConsumer>
                     {(value) => (
                         <Card className="mobile-card text-center mx-auto px-auto" onClick={()=>{value.handleDetails(id)}} style={{ width: '17rem' }}>
-                            <Card.Img className="mobile-image img-fluid mx-auto pt-3" variant="top" alt={ `${ name }` } src={ m1 } />
+                            <Card.Img className="mobile-image img-fluid mx-auto pt-3" variant="top" alt={ `${ name }` } src={ require(`../../assets/img/${image}`) } />
                             <Card.Body>
                                 <Card.Title className="mobile-title text-center">
                                     { name }

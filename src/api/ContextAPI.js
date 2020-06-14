@@ -89,7 +89,7 @@ class MobileProvider extends Component {
     makeTotal = () => {
         let subtotal = 0;
         this.state.cart.map((item) => {
-            subtotal += item.total
+            return subtotal += item.total
         });
         this.setState(() => {
             return{

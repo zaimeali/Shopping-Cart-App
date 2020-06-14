@@ -40,7 +40,7 @@ export default class Mobile extends Component {
                                         </div>
                                     </Row>
                                     <Row className="text-center">
-                                        <Button className="text-center mx-auto" size="sm" variant="secondary" disabled={ inCart } onClick={() => { value.addToCart(id) }}>
+                                        <Button className="text-center mx-auto" size="sm" variant="primary" disabled={ inCart } onClick={() => { value.addToCart(id) }}>
                                             { inCart ? (<span>In cart</span>) : (<span>Add to cart</span>) }
                                         </Button>
                                     </Row>
